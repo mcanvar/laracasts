@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Contact US</title>
-  </head>
-  <body>
+<?php require 'partials/head.php'; ?>
     <h1>Contact US</h1>
-  </body>
-</html>
+<?php require 'partials/footer.php'; ?>
