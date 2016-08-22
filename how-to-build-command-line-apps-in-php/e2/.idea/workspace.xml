@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73e6458a-d5ac-4992-a900-de12e9e7bce5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laracasts.php" />
-    </list>
+    <list default="true" id="73e6458a-d5ac-4992-a900-de12e9e7bce5" name="Default" comment="" />
     <ignored path="e2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
