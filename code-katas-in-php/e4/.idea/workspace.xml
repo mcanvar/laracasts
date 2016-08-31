@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7941d1f-ea57-4021-9010-56856c6d7d35" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../e3/.idea/e3.iml" afterPath="$PROJECT_DIR$/../e3/.idea/e3.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../e3/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../e3/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="b7941d1f-ea57-4021-9010-56856c6d7d35" name="Default" comment="" />
     <ignored path="e4.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -29,8 +25,8 @@
       <file leaf-file-name="StringCalculator.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/StringCalculator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37988827">
-              <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.6964618">
+              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -253,8 +249,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StringCalculator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37988827">
-          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.6964618">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding />
         </state>
       </provider>

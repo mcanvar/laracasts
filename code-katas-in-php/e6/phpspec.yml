@@ -1,0 +1,4 @@
+suites:
+  UniqueIndicator:
+    namespace: Acme
+    src_path: /
