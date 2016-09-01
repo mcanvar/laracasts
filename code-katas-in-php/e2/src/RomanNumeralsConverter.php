@@ -32,5 +32,5 @@ class RomanNumeralsConverter
         }
 
         return $solution;
-    }
+      }
 }
