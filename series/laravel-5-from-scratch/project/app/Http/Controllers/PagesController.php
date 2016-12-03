@@ -11,4 +11,9 @@ class PagesController extends Controller
           $people = ['Mevlut', 'Simge', 'Esra'];
           return view('welcome')->withPeople($people);
     }
+
+    public function about()
+    {
+          return view('pages.about');
+    }
 }
