@@ -2,17 +2,12 @@
 
 namespace App\Listeners;
 
+use App\Events\UserSignedUp;
+
 class SendThankYouEmail
 {
-  public $event;
-
-  public function __construct($event)
+  function handle(UserSignedUp $event)
   {
-    $this->event = $event;
-  }
-
-  function handle()
-  {
-    var_dump($this->event);
+    var_dump($event);
   }
 }
