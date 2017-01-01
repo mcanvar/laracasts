@@ -32,3 +32,12 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
         'body' => $faker->paragraph
     ];
 });
+
+$factory->define(App\Comment::class, function (Faker\Generator $faker) {
+    return [
+        'post_id' => function () {
+            return factory(App\Post::class)->create()->id;
+        },
+        'body' => $faker->paragraph
+    ];
+});
