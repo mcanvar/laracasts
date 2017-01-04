@@ -18,6 +18,24 @@ class LessonsContoller extends Controller
 
         return response()->json([
             'data' => $lessons->toArray()
-        ], 200);
+        ]);
+    }
+
+    public function show($id)
+    {
+        $lesson = Lesson::find($id);
+
+        if (! $lesson)
+        {
+            return response()->json([
+                'error' => [
+                    'message' => 'Lesson does not exists.'
+                ]
+            ]);
+        }
+
+        return response()->json([
+            'data' => $lesson->toArray()
+        ]);
     }
 }
