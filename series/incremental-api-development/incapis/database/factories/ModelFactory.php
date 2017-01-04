@@ -30,3 +30,9 @@ $factory->define(App\Lesson::class, function (Faker\Generator $faker) {
         'status' => $faker->boolean(50)
     ];
 });
+
+$factory->define(App\Tag::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->word
+    ];
+});
