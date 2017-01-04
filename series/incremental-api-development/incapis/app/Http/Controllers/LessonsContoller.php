@@ -14,7 +14,10 @@ class LessonsContoller extends Controller
 //        3. Linking structure.
 //        4. No way to signal headers/response codes.
 
-        return Lesson::all();
+        $lessons = Lesson::all();
 
+        return response()->json([
+            'data' => $lessons->toArray()
+        ], 200);
     }
 }
