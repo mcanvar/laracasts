@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 
 class ApiController extends BaseController
 {
-    protected $statusCode = 200;
+    protected $statusCode = Response::HTTP_OK;
 
     /**
      * @return mixed
@@ -26,12 +27,19 @@ class ApiController extends BaseController
 
     public function respondNotFound($message = 'Not Found!')
     {
-        return $this->setStatusCode(404)->respondWithError($message);
+        return $this->setStatusCode(Response::HTTP_NOT_FOUND)->respondWithError($message);
     }
 
     public function respondInternalError($message = 'Internal Error')
     {
-        return $this->setStatusCode(404)->respondWithError($message);
+        return $this->setStatusCode(ResPonse::HTTP_INTERNAL_SERVER_ERROR)
+            ->respondWithError($message);
+    }
+
+    public function respondUnprocessableEntity($message = 'Unprocessable Entity')
+    {
+        return $this->setStatusCode(Response::HTTP_UNPROCESSABLE_ENTITY)
+            ->respondWithError($message);
     }
 
     public function respond($data, $headers = [])
@@ -46,6 +54,13 @@ class ApiController extends BaseController
                 'message' => $message,
                 'status_code' => $this->getStatusCode()
             ]
+        ]);
+    }
+
+    public function respondCreated($message)
+    {
+        return $this->setStatusCode(Response::HTTP_CREATED)->respond([
+            'message' => $message
         ]);
     }
 }

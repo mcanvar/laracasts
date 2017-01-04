@@ -1,6 +1,7 @@
 <?php
 
 use App\Lesson;
+use App\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,5 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         Lesson::truncate();
         $this->call(LessonsTableSeeder::class);
+        User::truncate();
+        $this->call(UsersTableSeeder::class);
     }
 }
