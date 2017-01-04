@@ -15,4 +15,5 @@ Route::get('/', 'WelcomeController@index');
 
 Route::post('posts', 'WelcomeController@posts');
 
-Route::get('purchase', 'PurchaseController@store');
+Route::get('', 'PurchaseController@store');
+
