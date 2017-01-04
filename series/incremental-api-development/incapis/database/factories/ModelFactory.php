@@ -26,6 +26,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 $factory->define(App\Lesson::class, function (Faker\Generator $faker) {
     return [
         'title' => $faker->sentence,
-        'body' => $faker->paragraph
+        'body' => $faker->paragraph,
+        'status' => $faker->boolean(50)
     ];
 });

@@ -17,7 +17,7 @@ class LessonsContoller extends Controller
         $lessons = Lesson::all();
 
         return response()->json([
-            'data' => $lessons->toArray()
+            'data' => $this->transformCollection($lessons)
         ]);
     }
 
@@ -25,8 +25,7 @@ class LessonsContoller extends Controller
     {
         $lesson = Lesson::find($id);
 
-        if (! $lesson)
-        {
+        if (!$lesson) {
             return response()->json([
                 'error' => [
                     'message' => 'Lesson does not exists.'
@@ -35,7 +34,21 @@ class LessonsContoller extends Controller
         }
 
         return response()->json([
-            'data' => $lesson->toArray()
+            'data' => $this->transform($lesson->toArray())
         ]);
+    }
+
+    private function transformCollection($lessons)
+    {
+        return array_map([$this, 'transform'], $lessons->toArray());
+    }
+
+    private function transform($lesson)
+    {
+        return [
+            'title' => $lesson['title'],
+            'body' => $lesson['body'],
+            'active' => (boolean)$lesson['status']
+        ];
     }
 }
