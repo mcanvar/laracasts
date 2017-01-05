@@ -11,6 +11,11 @@
 |
 */
 
+use App\Http\Controllers\LessonsContoller;
+use App\Http\Controllers\TagsContoller;
+
 Route::group(['prefix' => 'api/v1'], function (){
-    Route::resource('lessons', LessonsContoller::class);
+    Route::get('lessons/{id}/tags', 'TagsController@index');
+    Route::resource('lessons', LessonsController::class);
+    Route::resource('tags', TagsController::class, ['index', 'show']);
 });

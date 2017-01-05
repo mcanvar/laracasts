@@ -6,14 +6,10 @@ use App\Transformers\LessonTransformer;
 use App\Lesson;
 use Illuminate\Http\Request;
 
-class LessonsContoller extends ApiController
+class LessonsController extends ApiController
 {
     protected $lessonTransformer;
 
-    /**
-     * LessonsContoller constructor.
-     * @param $lessonTransformer
-     */
     public function __construct(LessonTransformer $lessonTransformer)
     {
         $this->lessonTransformer = $lessonTransformer;
