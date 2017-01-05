@@ -20,10 +20,10 @@ class LessonsController extends ApiController
 
     public function index()
     {
-//        1. All is bad.
-//        2. No way to attch metadata.
-//        3. Linking structure.
-//        4. No way to signal headers/response codes.
+//  OK      1. All is bad.
+//  OK      2. No way to attch metadata.
+//  OK      3. Linking structure.
+//  OK      4. No way to signal headers/response codes.
 
         $lessons = Lesson::all();
 
