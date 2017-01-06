@@ -18,18 +18,21 @@ class LessonsController extends ApiController
     }
 
 
-    public function index()
+    public function index(Request $request)
     {
 //  OK      1. All is bad.
 //  OK      2. No way to attch metadata.
 //  OK      3. Linking structure.
 //  OK      4. No way to signal headers/response codes.
 
-        $lessons = Lesson::all();
+        $limit = (int)$request->get('limit') ?: 5;
 
-        return $this->respond([
-            'data' => $this->lessonTransformer->transformCollection($lessons->all())
-        ]);
+        $lessons = Lesson::paginate($limit);
+
+        return $this->respondWithPagination(
+            $lessons,
+            ['data' => $this->lessonTransformer->transformCollection($lessons->all())]
+        );
     }
 
     public function show($id)
@@ -47,8 +50,7 @@ class LessonsController extends ApiController
 
     public function store(Request $request)
     {
-        if (!$request->has('title') or !$request->has('body'))
-        {
+        if (!$request->has('title') or !$request->has('body')) {
             return $this->respondUnprocessableEntity('Parameters failed validation for a lesson');
         }
 
