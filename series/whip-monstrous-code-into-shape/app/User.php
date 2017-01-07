@@ -10,6 +10,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
+//    #2
+    use Completable;
+    use ParticipatesInForum;
 
     /**
      * The attributes that are mass assignable.
@@ -29,8 +32,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+
+//    #1
     public function stats ()
     {
         return new Stats($this);
     }
+
 }
