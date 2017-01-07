@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Traits;
 
 trait ParticipatesInForum {
     public function startComversation(Conversation $conversation)
